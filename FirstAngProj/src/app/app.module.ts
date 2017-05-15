@@ -8,13 +8,15 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { FeaturesComponent } from './features/features.component';
 
 @NgModule({
   declarations: [
     //AppRoutingModule,
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    FeaturesComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { AboutComponent } from './about/about.component';
     HttpModule,
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},
+      {path: 'features', component: FeaturesComponent},
       {path: 'about', component: AboutComponent},
       {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path: '**', redirectTo: 'home', pathMatch: 'full'}
